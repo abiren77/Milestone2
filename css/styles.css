@@ -1,0 +1,139 @@
+
+/*------------------------------------*\
+  MAIN
+\*------------------------------------*/
+html{
+  height:101%;
+}
+body{
+  font-family:Arial,Verdana,sans-serif;
+  font-size:0.75em;
+  color:#333;
+  max-width:960px;
+  margin:0 auto;
+}
+
+
+/*------------------------------------*\
+  NAV
+\*------------------------------------*/
+#nav{
+  margin-top: 0px;
+  background-color:#333;
+  list-style:none;
+  font-weight:bold;
+  margin-bottom:10px;
+  float:left;
+  width:100%;
+  padding-left: 0px;
+}
+#nav li{
+  border-right:1px solid #101010;
+  float:left;
+  position:relative;
+}
+#nav a{
+  display:block;
+  padding:15px 25px;
+  color:#fff;
+  background:#333;
+  text-decoration:none;
+}
+#nav a:hover{
+  color:#fff;
+  background:#6b0c36;
+  text-decoration:underline;
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+  margin-top: none;
+  background:#fff; 
+  background:rgba(255,255,255,0); 
+  list-style:none;
+  position:absolute;
+  padding-left: none;
+  left:-9999px;
+}
+#nav ul li{
+  padding-top:1px; 
+  float:none;
+}
+#nav ul a{
+  white-space:nowrap; 
+}
+#nav li:hover ul{ 
+  left:0; 
+  margin-left: 0px;
+  padding-left: 0px;
+}
+#nav li:hover a{ 
+  background:#6b0c36;
+  text-decoration:underline;
+}
+#nav li:hover ul a{ 
+  text-decoration:none;
+}
+#nav li:hover ul li a:hover{ 
+  background:#333;
+}
+
+
+#hamburgerMenu{
+  visibility: hidden; 
+  display: none;
+}
+
+#hamburgerMenuContainer{
+  width:0px;
+  display: none;
+  visibility: hidden; 
+  padding:0px;
+  margin: 0px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  html{
+    padding-top: 80px;
+    position:relative;
+  }
+  #nav{
+    position: absolute;
+    top: 0px;
+  }
+
+  #nav li{
+    display: none;
+    width: 100%;
+    /*display: none;*/
+  }
+  
+  #hamburgerMenu{
+    visibility: visible;
+    width: 15px;
+    height:auto;
+    border:1px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin:0px;
+    right: 10px;
+    display: block;
+    float: right;
+  }
+
+  #hamburgerMenuContainer{
+    width:20px;
+    visibility: visible;
+    float: right;
+  }
+
+  #hamburgerMenuContainer:hover{
+    background-color: #333;
+  }
+
+  #nav ul{
+    position: static;
+  }
+}
